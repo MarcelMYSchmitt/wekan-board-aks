@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: prometheus
+spec:
+  replicas: 1
+  minReadySeconds: 5 
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      containers:
+      - name: prometheus
+        image: mrmyiagi/prometheus:latest
+        imagePullPolicy: Always
+        args:
+          - "--config.file=/etc/prometheus/prometheus.yml"
+          - "--web.external-url=$(EXTERNAL_URL)"
+          - "--web.route-prefix=/"
+        env:
+          - name: EXTERNAL_URL
+            valueFrom:
+              configMapKeyRef:
+                name: prometheus-external-url
+                key: EXTERNAL_URL
