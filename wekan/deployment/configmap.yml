@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: wekan-root-url
 data:
-  ROOT_URL: https://wekandoit.westeurope.cloudapp.azure.com/
+  ROOT_URL: https://wekanboardmongodb.westeurope.cloudapp.azure.com

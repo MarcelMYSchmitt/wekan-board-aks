@@ -9,5 +9,4 @@ This is just an example and not for production! We also could change the service
 3. Deploy Prometheus with ´kubectl apply -f deployment.yml´
 4. Deploy Service with ´kubectl apply -f service.yml´
 
-
 If you want to add new targets for scraping just edit the ´prometheus.yml´ inside of the configuration folder.

@@ -24,3 +24,5 @@ spec:
               configMapKeyRef:
                 name: prometheus-external-url
                 key: EXTERNAL_URL
+      imagePullSecrets:
+      - name: regcred
