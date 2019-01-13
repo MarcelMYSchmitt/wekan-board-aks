@@ -12,19 +12,19 @@ Step by step
 2. Create a resource group.
 3. Create a container registry for your images (Prometheus/Grafana).
 4. Create an AKS inside of your resource group.\
-   Inside of your AKS give your static ip adress a name and a DNS name.\ 
-   You will both use them later for your ingress.\ 
+   Inside of your AKS give your static ip adress a name and a DNS name.\
+   You will both use them later for your ingress.
 5. Login into Azure CLI using PowerShell and get your Kubernetes Configuration.
 6. Deploy Tiller.
 7. Deploy Ingress Controller (NGINX).
 8. Deploy CERT Manager (for TLS and using Let's Encrypt)
-9. Deploy Prometheus and Grafana via Helm Charts or use your own images.\ 
-   9.1 Build your images with the right tag of your container registry.\
-   9.2 Login into your container registry.\
-   9.3 Push your images.\
-   9.4 Create secret for authentication of your cluster against the container registry: kubectl create secret docker-registry acr-auth --docker-server <acr-login-server> --docker-username <service-principal-ID> --docker-password <service-principal-password> --docker-email <email-address>\
-   9.5 Use your secret inside of your deployment files.\
-   9.6 Deploy Grafana and Prometheus.\
-10.Deploy MongoDB and its service. 
-11.Deploy WeKan, its service and ingress.
+9. Deploy Prometheus and Grafana via Helm Charts or use your own images.\
+   Build your images with the right tag of your container registry.\
+   Login into your container registry.\
+   Push your images.\
+   Create secret for authentication of your cluster against the container registry: kubectl create secret docker-registry acr-auth --docker-server <acr-login-server> --docker-username <service-principal-ID> --docker-password <service-principal-password> --docker-email <email-address>\
+   Use your secret inside of your deployment files.\
+   Deploy Grafana and Prometheus.
+10. Deploy MongoDB and its service. 
+11. Deploy WeKan, its service and ingress.
 
